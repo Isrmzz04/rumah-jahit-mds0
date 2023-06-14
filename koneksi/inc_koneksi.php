@@ -4,7 +4,7 @@ $user       = "root";
 $pass       = "";
 $db         = "dafitosz";
 
-$koneksi    = mysqli_connect($host,$user,$pass,$db);
-if(!$koneksi){
+$conn    = mysqli_connect($host,$user,$pass,$db);
+if(!$conn){
     die("Gagal terkoneksi");
 }
