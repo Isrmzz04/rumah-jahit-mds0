@@ -18,7 +18,7 @@ function saveCartToDatabase()
     global $conn;
 
     // Menghapus semua data keranjang belanja yang ada di database
-    $sqlDelete = "DELETE FROM cart_items";
+    $sqlDelete = "DELETE FROM carts";
     $conn->query($sqlDelete);
 
     // Mendapatkan seluruh item dalam keranjang
@@ -26,12 +26,10 @@ function saveCartToDatabase()
 
     // Menyimpan setiap item dalam keranjang ke database
     foreach ($cartItems as $item) {
-        $kd_product = $item['kd_product'];
-        $name = $item['name'];
-        $price = $item['price'];
+        $product_id = $item['product_id'];
         $quantity = $item['quantity'];
 
-        $sqlInsert = "INSERT INTO cart_items (kd_product, name, price, quantity) VALUES ('$kd_product', '$name', '$price', '$quantity')";
+        $sqlInsert = "INSERT INTO carts (product_id, quantity) VALUES ('$product_id', '$quantity')";
         $conn->query($sqlInsert);
     }
 }
@@ -45,16 +43,18 @@ function loadCartFromDatabase()
     $_SESSION['cart'] = [];
 
     // Mengambil data item dari database
-    $sqlSelect = "SELECT * FROM carts";
+    $sqlSelect = "SELECT carts.*, products.* FROM carts JOIN products ON carts.product_id = products.product_id";
     $result = $conn->query($sqlSelect);
 
     if ($result->num_rows > 0) {
         // Menambahkan setiap item ke dalam keranjang
         while ($row = $result->fetch_assoc()) {
             $item = [
-                'kd_product' => $row['kd_product'],
-                'name' => $row['name'],
+                'product_id' => $row['product_id'],
+                'product_name' => $row['product_name'],
+                'category_id' => $row['category_id'],
                 'price' => $row['price'],
+                'image' => $row['image'],
                 'quantity' => $row['quantity']
             ];
             $_SESSION['cart'][] = $item;

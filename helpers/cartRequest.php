@@ -1,47 +1,47 @@
 <?php
 // Cek apakah ada permintaan untuk menambahkan item ke keranjang
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
-    $kd_product = $_POST['kd_product'];
-
-    if (isset($_SESSION['cart'])) {
-        $cartItemIndex = false;
-
-        // Mencari indeks item dalam keranjang belanja
-        foreach ($_SESSION['cart'] as $index => $item) {
-            if ($item['kd_product'] === $kd_product) {
-                $cartItemIndex = $index;
-                break;
+    if (!isset($_SESSION['username'])) {
+        header('location:?must_login');
+        $product_id = $_POST['product_id'];
+    }else{
+        if (isset($_SESSION['cart'])) {
+            $cartItemIndex = false;
+    
+            // Mencari indeks item dalam keranjang belanja
+            foreach ($_SESSION['cart'] as $index => $item) {
+                if ($item['product_id'] === $product_id) {
+                    $cartItemIndex = $index;
+                    break;
+                }
             }
-        }
-
-        // Jika item sudah ada dalam keranjang belanja, tambahkan quantity
-        if ($cartItemIndex !== false) {
-            $_SESSION['cart'][$cartItemIndex]['quantity']++;
+    
+            // Jika item sudah ada dalam keranjang belanja, tambahkan quantity
+            if ($cartItemIndex !== false) {
+                $_SESSION['cart'][$cartItemIndex]['quantity']++;
+            } else {
+                // Jika item belum ada dalam keranjang belanja, tambahkan item baru
+                $item = [
+                    'product_id' => $_POST['product_id'],
+                    'quantity' => 1
+                ];
+    
+                $_SESSION['cart'][] = $item;
+            }
         } else {
-            // Jika item belum ada dalam keranjang belanja, tambahkan item baru
+            // Jika keranjang belanja belum ada, tambahkan item baru
             $item = [
-                'kd_product' => $_POST['kd_product'],
-                'name' => $_POST['product_name'],
-                'price' => $_POST['product_price'],
+                'product_id' => $_POST['product_id'],
                 'quantity' => 1
             ];
-
-            $_SESSION['cart'][] = $item;
+    
+            $_SESSION['cart'] = [$item];
         }
-    } else {
-        // Jika keranjang belanja belum ada, tambahkan item baru
-        $item = [
-            'kd_product' => $_POST['kd_product'],
-            'name' => $_POST['product_name'],
-            'price' => $_POST['product_price'],
-            'quantity' => 1
-        ];
-
-        $_SESSION['cart'] = [$item];
+    
+        saveCartToDatabase();
+        header("Refresh:0");
     }
-
-    saveCartToDatabase();
-    header("Refresh:0");
+    
 }
 
 

@@ -5,3 +5,10 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
+.cart__content{
+    display: none;
+}
+
+.cart__content.active{
+    display: block;
+}
