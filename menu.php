@@ -9,7 +9,11 @@
     <details class="dropdown dropdown-end lg:hidden md:block">
         <summary class="m-1 cursor-pointer capitalize btn bg-transparent border-none hover:bg-white/10"><i
                 class='bx bx-menu-alt-right text-3xl'></i></summary>
-        <ul class="p-2 mt-4 menu dropdown-content z-[1] w-fit bg-slate-100 dropdown-left rounded-lg text-black/80 shadow">
+        <ul
+            class="p-2 mt-4 menu dropdown-content z-[1] w-fit bg-slate-100 dropdown-left rounded-lg text-black/80 shadow">
+            <li>
+                <a href="./" class="hover:text-[#333]">Beranda</a>
+            </li>
             <li>
                 <a href="?page=album" class="hover:text-[#333]">Album</a>
             </li>
@@ -40,6 +44,9 @@
         </ul>
     </details>
     <ul class="lg:flex flex-none gap-5 hidden">
+        <li>
+            <a href="./" class="hover:text-[#333]">Beranda</a>
+        </li>
         <li>
             <a href="?page=album" class="hover:text-[#333]">Album</a>
         </li>

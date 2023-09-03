@@ -50,11 +50,20 @@
         ?>
     </main>
 
-    <footer class="footer footer-center p-4 bg-[#222] text-base-content">
-        <div>
-            <p>Copyright © 2023 - All right reserved by Rumah Jahit MDS</p>
+    <footer class="bg-[#222] text-white">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div class="rounded-lg overflow-hidden w-fit mx-auto lg:mx-0 md:mx-0">
+                    <img src="./assets/images/logo.jpg" alt="" class="w-16 h-16">
+                </div>
+
+                <p class="mt-4 text-center text-sm lg:mt-0 lg:text-right">
+                    Copyright &copy; 2022. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
+
 </body>
 
 </html>

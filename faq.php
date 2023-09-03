@@ -2,8 +2,8 @@
     <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
         <div class="flex flex-col mb-16 sm:text-center">
             <a href="?page=faq" class="mb-6 mx-auto">
-                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-                    <i class='bx bx-question-mark text-xl text-indigo-500 font-bold'></i>
+                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-50">
+                    <i class='bx bx-question-mark text-xl text-blue-500 font-bold'></i>
                 </div>
             </a>
             <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
@@ -31,29 +31,29 @@
         <div class="space-y-4 text-black/80">
             <div class="collapse collapse-arrow border-2 rounded-lg">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-lg font-medium">
+                <div class="collapse-title lg:text-lg md:text-lg text-md font-medium">
                     Apakah bahan bisa dari MDS?
                 </div>
                 <div class="collapse-content">
-                    <p class="text-[1rem]">Untuk order jahitan semua bahan termasuk bahan kombinasi dari customer, kami hanya menyediakan kain furing dan material jahitan saja.</p>
+                    <p class="text-[.9rem] md:text-[1rem] lg:text-[1rem]">Untuk order jahitan semua bahan termasuk bahan kombinasi dari customer, kami hanya menyediakan kain furing dan material jahitan saja.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow border-2 rounded-lg">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-lg font-medium">
+                <div class="collapse-title lg:text-lg md:text-lg text-md font-medium">
                     Bisakah saya menjahitkan baju dengan label saya sendiri di MDS?
                 </div>
                 <div class="collapse-content">
-                    <p class="text-[1rem]">Kami melayani jasa menjahit untuk label busana anda sendiri, dengan catatan ongkos jahit sesuai dengan biaya standar MDS (bukan borongan) dan jadwal pengerjaan mengikuti antrian di MDS (tidak mengikuti jadwal produksi baju anda).</p>
+                    <p class="text-[.9rem] md:text-[1rem] lg:text-[1rem]">Kami melayani jasa menjahit untuk label busana anda sendiri, dengan catatan ongkos jahit sesuai dengan biaya standar MDS (bukan borongan) dan jadwal pengerjaan mengikuti antrian di MDS (tidak mengikuti jadwal produksi baju anda).</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow border-2 rounded-lg">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-lg font-medium">
+                <div class="collapse-title lg:text-lg md:text-lg text-md font-medium">
                     Apakah bisa membuat label baju di MDS?
                 </div>
                 <div class="collapse-content">
-                    <p class="text-[1rem]">MDS adalah penjahit, kami tidak membuat label baju ^_^. Untuk pembuatan label baju bisa menghubungi Aneka Label di (Alamat)</p>
+                    <p class="text-[.9rem] md:text-[1rem] lg:text-[1rem]">MDS adalah penjahit, kami tidak membuat label baju ^_^. Untuk pembuatan label baju bisa menghubungi Aneka Label di (Alamat)</p>
                 </div>
             </div>
         </div>

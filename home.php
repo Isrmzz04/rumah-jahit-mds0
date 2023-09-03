@@ -32,38 +32,68 @@
 </section>
 
 <!-- CATEGORY -->
-<section class="mt-[10rem] w-[90%] m-auto min-h-screen">
-    <div class="text-4xl text-[#222] font-semibold text-center">Category</div>
-    <div class="mt-[4rem] m-auto flex gap-5 justify-center flex-wrap mb-[4rem]">
-        <a href="" class="relative w-[250px] rounded-lg overflow-hidden transition-all">
-            <img src="assets/images/album/sample-1.jpg" alt=""
-                class="h-[400px] object-cover brightness-[.8] hover:scale-[1.2] transition-all">
-            <div class="absolute bottom-0 right-0 z-40 text-white m-5 font-semibold text-xl">Kebaya</div>
-        </a>
-        <a href="" class="relative w-[250px] rounded-lg overflow-hidden transition-all">
-            <img src="assets/images/album/sample-2.jpg" alt=""
-                class="h-[400px] object-cover brightness-[.8] hover:scale-[1.2] transition-all">
-            <div class="absolute bottom-0 right-0 z-40 text-white m-5 font-semibold text-xl">Kebaya</div>
-        </a>
-        <a href="" class="relative w-[250px] rounded-lg overflow-hidden transition-all">
-            <img src="assets/images/album/sample-3.jpg" alt=""
-                class="h-[400px] object-cover brightness-[.8] hover:scale-[1.2] transition-all">
-            <div class="absolute bottom-0 right-0 z-40 text-white m-5 font-semibold text-xl">Kebaya</div>
-        </a>
-        <a href="" class="relative w-[250px] rounded-lg overflow-hidden transition-all">
-            <img src="assets/images/album/sample-4.jpg" alt=""
-                class="h-[400px] object-cover brightness-[.8] hover:scale-[1.2] transition-all">
-            <div class="absolute bottom-0 right-0 z-40 text-white m-5 font-semibold text-xl">Kebaya</div>
-        </a>
-        <a href="" class="relative w-[250px] max-w-[500px] rounded-lg overflow-hidden transition-all">
-            <img src="assets/images/album/sample-5.jpg" alt=""
-                class="h-[400px] object-cover brightness-[.8] hover:scale-[1.2] transition-all">
-            <div class="absolute bottom-0 right-0 z-40 text-white m-5 font-semibold text-xl">Kebaya</div>
-        </a>
-        <a href="" class="relative w-[250px] rounded-lg overflow-hidden transition-all">
-            <img src="assets/images/album/sample-1.jpg" alt=""
-                class="h-[400px] object-cover brightness-[.8] hover:scale-[1.2] transition-all">
-            <div class="absolute bottom-0 right-0 z-40 text-white m-5 font-semibold text-xl">Kebaya</div>
-        </a>
+<section class="my-[10rem] w-[90%] m-auto min-h-screen">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <header class="text-center">
+            <h2 class="text-3xl font-bold text-[#222] lg:text-4xl ">
+                Kategori
+            </h2>
+
+            <p class="max-w-md mx-auto mt-4 text-gray-500">
+                Kami menyajikan produk-produk kami dalam tampilan daftar yang rinci dan terurut. Ini adalah pilihan yang
+                sempurna untuk melihat detail setiap produk dengan cermat
+            </p>
+        </header>
+
+        <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+            <li>
+                <div class="relative block group rounded-lg overflow-hidden">
+                    <img src="./assets/images/category/cat-1.jpg" alt=""
+                        class="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90" />
+
+                    <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+                        <h3 class="text-xl font-medium text-white">Kategori A</h3>
+
+                        <a href="?page=album"
+                            class="mt-1.5 rounded-lg inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white hover:bg-blue-500 transition-all">
+                            Selengkapnya
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="relative block group rounded-lg overflow-hidden">
+                    <img src="./assets/images/category/cat-2.jpg" alt="./assets/images/category/cat-2.jpg"
+                        class="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90" />
+
+                    <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+                        <h3 class="text-xl font-medium text-white">Kategori B</h3>
+
+                        <a href="?page=album"
+                            class="mt-1.5 rounded-lg inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white hover:bg-blue-500 transition-all">
+                            Selengkapnya
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+                <div class="relative block group rounded-lg overflow-hidden">
+                    <img src="./assets/images/category/cat-3.jpg" alt=""
+                        class="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90" />
+
+                    <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+                        <h3 class="text-xl font-medium text-white">Kategori C</h3>
+
+                        <a href="?page=album"
+                            class="mt-1.5 rounded-lg inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white hover:bg-blue-500 transition-all">
+                            Selengkapnya
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
+
 </section>
