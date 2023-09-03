@@ -1,0 +1,1 @@
+<h2 class="text-[#222] text-[3rem] m-10">Selamat datang, <?=$_SESSION['admin']['username'] ?></h2>
